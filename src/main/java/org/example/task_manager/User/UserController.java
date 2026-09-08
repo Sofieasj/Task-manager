@@ -1,4 +1,4 @@
-package org.example.task_manager.User;
+package org.example.task_manager.user;
 
 import org.springframework.web.bind.annotation.*;
 

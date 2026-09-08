@@ -1,24 +1,24 @@
-package org.example.task_manager.User;
+package org.example.task_manager.user;
 
+import jakarta.persistence.Entity;
+
+@Entity 
 public class User {
     // initialiser variabler
-    int userID;
-    String name;
-    String email;
-    String password;
+    private Long userId;
+    private String name;
+    private String email;
+    private String password;
 
     // konstruktør
-    public User(int userID, String name, String email, String password) {
-        this.userID = userID;
+    public User(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
     }
 
-    // gettere og settere:
-    // id skal autogenereres av DB - derfor ingen set() ?
-    public int getUserID() {
-        return userID;
+    public Long getUserId() {
+        return userId;
     }
 
     public String getName() {
@@ -26,8 +26,8 @@ public class User {
     }
 
     public void setName(String name) {
-        // legg inn ekstra verifisering
-        if (!name.equals("hei")) this.name = name;
+        // legg inn verifisering i frontend og backend
+        if (!name.equals("")) this.name = name;
     }
 
     public String getEmail() {
@@ -35,11 +35,11 @@ public class User {
     }
 
     public void setEmail(String email) {
-        // input verification i frontend, men legg inn sikkerhet her og
+        // legg inn verifisering i frontend og backend
         this.email = email;
     }
 
-    // obs - hvordan håndtere passord/login sikkert
+    // obs - hvordan håndtere passord/login sikkert - hashing?
     public String getPassword() {
         return password;
     }
