@@ -1,6 +1,6 @@
 # Prosjekt: Task manager
 
-Målet er å lage en enkel task manager der en person kan opprette, redigere, fullføre og slette opgpaver.
+Målet er å lage en enkel task manager der en person kan opprette, redigere, fullføre og slette opgpaver.  
 Tiltenkt målgruppe er for eksempel en student, som ønsker en enkel, no-fuss sjekkliste.
 
 ## Tech stack
@@ -8,11 +8,12 @@ Tiltenkt målgruppe er for eksempel en student, som ønsker en enkel, no-fuss sj
 * postgreSQL
 * typeScript
 * html5
-* css3
+* css3 / bootstrap / designsystemet
 
 ## Hovedfunksjonalitet:
-* Registrere en bruker
+* Registrere en user
 * Logge inn og logge ut
+
 * Opprette en oppgave
 * Endre en oppgave
 * Slette oppgave
@@ -24,11 +25,11 @@ Tiltenkt målgruppe er for eksempel en student, som ønsker en enkel, no-fuss sj
 * Deadline - kalenderfunksjon
 
 ## Brukerkrav
-* Som bruker ønsker jeg å kunne lage en konto og å kunne logge inn på denne
-* Som bruker ønsker jeg å opprette oppgaver
-* Som bruker ønsker jeg å markere en oppgave som fullført
-* Som bruker ønsker jeg å kunne endre en opprettet oppgave
-* Som bruker ønsker jeg å kunne slette en oppgave fra listen
+* Som user ønsker jeg å kunne lage en konto og å kunne logge inn på denne
+* Som user ønsker jeg å opprette oppgaver
+* Som user ønsker jeg å markere en oppgave som fullført
+* Som user ønsker jeg å kunne endre en opprettet oppgave
+* Som user ønsker jeg å kunne slette en oppgave fra listen
 
 ## Design
 ### Flyt
@@ -72,12 +73,3 @@ Tiltenkt målgruppe er for eksempel en student, som ønsker en enkel, no-fuss sj
 * POST /oppgaver
 * PUT /oppgaver/:id
 * DELETE /oppgaver/:id
-
-## Plan:
-Jobb steg for steg - istedenfor å lage hele databasen, deretter hele backend, så frontend, vil jeg forsøke å lage én og én funksjonalitet om gangen, typ:
-* TDD - test for backend
-* registrere bruker-funksjonalitet
-* database - for brukere
-* backend - POST for registrering
-* frontend skjema for reg.
-* flere tester
