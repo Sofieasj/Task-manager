@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TaskManager</title>
+
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
     </head>
     <body>
-        <section id="taskDashboard"></section>
+        <section id="taskDashboard">
+            <h1>Your tasks</h1>
+
+            <!-- CREATE NEW TASK -->
+            <h2>Add a new task</h2>
+            <form id="newTaskForm">
+                <label for="title">Tittel *</label>
+                <input type="text" id="title" required>
+
+                <label for="desc">Description</label>
+                <input type="text" id="desc">
+
+                <button type="submit" name="newTask" id="newTask">Save</button>
+            </form>
+
+            <!-- TASK LIST -->
+            <div id="taskList">
+                <!-- TASKS INSERTED HERE WITH JS -->
+            </div>
+
+            <!-- TASK DETAILS -->
+            <div  id="taskDetails" class="taskCard hidden">
+                <h2>Task details</h2>
+                <h3 id="detailTitle"></h3>
+                <p id="detailDescription"></p>
+
+                <button id="editTask" class="edit">Edit</button>
+                <button id="deleteTask" class="delete">Delete</button>
+            </div>
+
+            <!-- EDIT TASK -->
+            <div id="editSection" class="taskCard hidden">
+                <h2>Edit your task</h2>
+                <form id="editForm">
+                    <label for="editTitle">Title *</label>
+                    <input type="text" id="editTitle" required>
+
+                    <label for="editDesc">Description</label>
+                    <textarea id="editDesc"></textarea>
+
+                    <button type="submit">Save</button>
+                    <button type="button" id="cancelEdit">Cancel</button>
+                </form>
+            </div>
+
+            <!-- DELETE TASK -->
+            <div id="confirmDeletion" class="hidden">
+                <p>Warning information</p>
+
+                <label for="confirmDelete">Are you sure you want to delete this task?</label>
+                <button type="submit" id="confirmDelete">Delete</button>
+
+                <button type="button">Cancel</button>
+            </div>
+        </section>
     </body>
 </html>

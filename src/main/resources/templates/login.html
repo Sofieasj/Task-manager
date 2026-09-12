@@ -3,9 +3,47 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TaskManager - login</title>
+        <title>TaskManager</title>
+
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
     </head>
     <body>
-        <section id="login"></section>
+        <h1>Task manager</h1>
+        <!--  LOG IN EXISTING USER -->
+        <section id="login">
+            <h2>Log in</h2>
+            <form id="loginForm">
+                <label for="email">Your email:</label>
+                <input type="email" id="email">
+
+                <label for="password">Your password:</label>
+                <input type="password" id="password">
+
+                <button type="submit" class="primary-btn">Log in</button>
+                <button type="button" class="tertiary-btn">Forgot password?</button>
+            </form>
+        </section>
+
+        <!-- REGISTER NEW USER -->
+        <section id="register">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="registrationEmail">Your email:</label>
+                <input type="email" id="registrationEmail">
+
+                <label for="registrationPassword">Your password:</label>
+                <input type="password" id="registrationPassword">
+
+                <label for="confRegistrationPassword">Confirm your password:</label>
+                <input type="password" id="confRegistrationPassword">
+
+                <button type="submit" class="primary-btn">Register user</button>
+            </form>
+        </section>
     </body>
 </html>
